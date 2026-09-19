@@ -1,0 +1,117 @@
+:root {
+  --fm-bg: #f4f6f9;
+  --fm-surface: #ffffff;
+  --fm-text: #1a1d24;
+  --fm-muted: #5c6578;
+  --fm-brand: #e63946;
+  --fm-brand-dark: #c1121f;
+  --fm-accent: #1d3557;
+  --fm-border: #e2e6ef;
+  --fm-radius: 12px;
+  --fm-shadow: 0 4px 24px rgba(26, 29, 36, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  background: var(--fm-bg);
+  color: var(--fm-text);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--fm-accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn-primary {
+  background: var(--fm-brand);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--fm-brand-dark);
+}
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-outline {
+  background: transparent;
+  color: var(--fm-accent);
+  border: 2px solid var(--fm-border);
+}
+.btn-outline:hover {
+  border-color: var(--fm-accent);
+  background: rgba(29, 53, 87, 0.06);
+}
+
+.input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--fm-border);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.input:focus {
+  outline: none;
+  border-color: var(--fm-accent);
+  box-shadow: 0 0 0 3px rgba(29, 53, 87, 0.12);
+}
+
+.card {
+  background: var(--fm-surface);
+  border-radius: var(--fm-radius);
+  box-shadow: var(--fm-shadow);
+  border: 1px solid var(--fm-border);
+  overflow: hidden;
+}
+
+.page-inner {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 2.5rem;
+  flex: 1;
+}
+
+.muted {
+  color: var(--fm-muted);
+  font-size: 0.9rem;
+}
+
+.err-msg {
+  color: var(--fm-brand);
+  font-size: 0.875rem;
+  margin-top: 0.35rem;
+}
