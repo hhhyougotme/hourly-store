@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: hourlystore-backend
+  datasource:
+    url: jdbc:mysql://localhost:3306/hourlystore?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: YOUR_MYSQL_PASSWORD
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
+      timeout: 3s
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      id-type: auto
+
+server:
+  port: 8080
+
+hourlystore:
+  cache:
+    double-delete-delay-ms: 400
+  auth:
+    token-header: Authorization
+    token-prefix: "Bearer "
+    redis-key-prefix: "hourlystore:session:"
+    user-session-prefix: "hourlystore:user-session:"
+    verification-prefix: "hourlystore:verify:"
+    token-ttl-hours: 168
+    verification-code-ttl-minutes: 5
+    expose-verification-code-in-response: true
+  streams:
+    enabled: true
+    poll-ms: 800
+    order-wait-ms: 5000
