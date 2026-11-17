@@ -1,4 +1,4 @@
--- Run on existing hourlystore DB: mysql -u root -p hourlystore < migration_full_requirements.sql
+-- Run on existing hourlystore DB: mysql -u root -p hourlystore < migration_schema_extensions.sql
 USE hourlystore;
 
 ALTER TABLE `user`

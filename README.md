@@ -2,7 +2,7 @@
 
 **High-concurrency flash-sale backend** (Java / Spring Boot / MySQL / Redis / Redisson) with a Vue 3 storefront.
 
-Built to practice the same failure modes as real flash sales: **oversell**, **hot-key inventory**, and **checkout write amplification**.
+Personal project exploring the same failure modes as real flash sales: **oversell**, **hot-key inventory**, and **checkout write amplification**.
 
 [![Java](https://img.shields.io/badge/Java-17-orange)](https://openjdk.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2-brightgreen)](https://spring.io/projects/spring-boot)
@@ -12,7 +12,7 @@ Built to practice the same failure modes as real flash sales: **oversell**, **ho
 
 ---
 
-## Highlights (resume-aligned)
+## Load-test highlights
 
 | Metric | Result |
 |--------|--------|
